@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Introduction from "../components/Homepage/Introduction";
 import MySkills from "../components/Homepage/MySkills";
 import Navigation from "../components/Global/Navigation";
