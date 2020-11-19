@@ -1,0 +1,46 @@
+.my-skills-wrapper {
+	font-family: "Slabo 13px", serif;
+	h1 {
+		font-size: 48px;
+		font-family: "Slabo 13px", serif;
+		text-align: center;
+		margin-bottom: 2vh;
+		color: white;
+		margin-top: 8vh;
+	}
+	.skill-components {
+		display: flex;
+		margin: auto auto;
+		width: 90%;
+		// border: 1px solid magenta;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+
+		article {
+			background-color: #c7c7c7;
+			padding: 20px;
+			text-align: center;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			border: 3px solid #000000;
+			height: 300px;
+			width: 400px;
+			margin: 20px;
+			box-shadow: 10px 15px 10px rgb(43, 42, 42);
+
+			img {
+				height: 100px;
+				width: 100px;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+
+			&:hover {
+				border: 3px solid #ef7c1a;
+				box-shadow: 10px 15px 10px #ef7d1a63;
+			}
+		}
+	}
+}

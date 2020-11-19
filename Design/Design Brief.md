@@ -12,3 +12,4 @@ The site will contain the following:
 - A page with social media links
 - A contact form
 - A devDiary for my projects
+- A Hire Me page

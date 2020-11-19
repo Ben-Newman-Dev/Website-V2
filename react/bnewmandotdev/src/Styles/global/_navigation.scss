@@ -1,0 +1,35 @@
+.navigation-wrapper {
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	color: white;
+	font-family: "Slabo 13px", serif;
+
+	h1 {
+		font-family: monospace;
+		font-size: 35px;
+	}
+
+	.link-wrapper {
+		width: 60%;
+		display: flex;
+		justify-content: space-around;
+		align-content: baseline;
+
+		a {
+			color: white;
+			text-decoration: none;
+			font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+			font-size: 20px;
+			padding-top: 50px;
+			padding: 50px 10px 10px 10px;
+			margin-bottom: 40px;
+			transition: 0.4s;
+
+			&:hover {
+				background-color: #ef7c1a;
+			}
+		}
+	}
+}
