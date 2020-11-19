@@ -1,4 +1,4 @@
-const Navigation = (activePage) => {
+const Navigation = () => {
 	return (
 		<div className="navigation-wrapper">
 			<img src="https://via.placeholder.com/121x121.png" alt="Logo" />
@@ -7,7 +7,7 @@ const Navigation = (activePage) => {
 				<a className="home" href="/">
 					Home
 				</a>
-				<a className="about" href="/">
+				<a className="about" href="/about">
 					About Me
 				</a>
 				<a className="projects" href="/">

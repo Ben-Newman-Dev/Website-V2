@@ -8,16 +8,9 @@ body {
 	background-color: #444444;
 }
 
-.navigation-wrapper {
-	.link-wrapper {
-		.home {
-			background-color: #ef7c1a;
-		}
-	}
-}
-
 @import "./introduction";
 @import url("https://fonts.googleapis.com/css2?family=Slabo+13px&display=swap");
 @import "./myskills";
 @import "../global/navigation";
 @import "../global/footer";
+@import "../aboutme/about";

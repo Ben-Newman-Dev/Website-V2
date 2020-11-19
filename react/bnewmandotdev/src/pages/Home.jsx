@@ -9,7 +9,7 @@ const Home = () => {
 	// const [activePage, setActivePage] = useState("Home");
 	return (
 		<>
-			<Navigation activePage="Home" />
+			<Navigation />
 			<Introduction />
 			<MySkills />
 			<Footer />
