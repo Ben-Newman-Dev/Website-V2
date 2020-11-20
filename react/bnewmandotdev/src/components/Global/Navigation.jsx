@@ -7,11 +7,20 @@ const Navigation = () => {
 	let e = {};
 	let f = {};
 	switch (url) {
+		case "/devdiary":
+			d = { backgroundColor: "#ef7c1a" };
+			break;
+		case "/projects":
+			c = { backgroundColor: "#ef7c1a" };
+			break;
 		case "/about":
 			b = { backgroundColor: "#ef7c1a" };
 			break;
-		default:
+		case "/":
 			a = { backgroundColor: "#ef7c1a" };
+			break;
+		default:
+			break;
 	}
 	return (
 		<div className="navigation-wrapper">
@@ -24,10 +33,10 @@ const Navigation = () => {
 				<a style={b} className="about" href="/about">
 					About Me
 				</a>
-				<a style={c} className="projects" href="/">
+				<a style={c} className="projects" href="/projects">
 					My Projects
 				</a>
-				<a style={d} className="devdiary" href="/">
+				<a style={d} className="devdiary" href="/devdiary">
 					DevDiary
 				</a>
 				<a style={e} className="links" href="/">
