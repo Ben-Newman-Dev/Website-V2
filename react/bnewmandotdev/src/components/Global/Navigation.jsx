@@ -7,6 +7,12 @@ const Navigation = () => {
 	let e = {};
 	let f = {};
 	switch (url) {
+		case "/contact":
+			f = { backgroundColor: "#ef7c1a" };
+			break;
+		case "/links":
+			e = { backgroundColor: "#ef7c1a" };
+			break;
 		case "/devdiary":
 			d = { backgroundColor: "#ef7c1a" };
 			break;
@@ -39,10 +45,10 @@ const Navigation = () => {
 				<a style={d} className="devdiary" href="/devdiary">
 					DevDiary
 				</a>
-				<a style={e} className="links" href="/">
+				<a style={e} className="links" href="/links">
 					Links
 				</a>
-				<a style={f} className="contact" href="/">
+				<a style={f} className="contact" href="/contact">
 					Contact Me
 				</a>
 			</div>
