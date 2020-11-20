@@ -1,0 +1,35 @@
+.devdiary-submenu {
+	padding-top: 3vh;
+	text-align: center;
+	background-color: rgb(80, 80, 80);
+	a {
+		font-size: 30px;
+		text-decoration: none;
+		color: white;
+		font-family: "Courier New", Courier, monospace;
+		border: 1px solid white;
+		padding: 5px 20px;
+
+		&:hover {
+			border: 1px solid #ef7c1a;
+		}
+	}
+	.submenu {
+		margin-top: 3vh;
+		display: flex;
+		justify-content: space-evenly;
+		width: 100%;
+		background-color: rgb(80, 80, 80);
+		padding: 10px;
+	}
+}
+
+.devdiary-wrapper {
+	text-align: center;
+	color: white;
+	font-family: "Courier New", Courier, monospace;
+	h1 {
+		margin-top: 5vh;
+		font-size: 50px;
+	}
+}
