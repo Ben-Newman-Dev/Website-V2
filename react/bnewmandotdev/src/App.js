@@ -29,6 +29,9 @@ function App() {
 				<Route path="/contact" exact>
 					<ContactMe />
 				</Route>
+				<Route>
+					<h1 style={{ color: "white" }}>404 Not Found</h1>
+				</Route>
 			</Switch>
 		</div>
 	);
