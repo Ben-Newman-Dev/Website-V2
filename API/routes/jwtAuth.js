@@ -2,13 +2,16 @@ const router = require("express").Router();
 const pool = require("../db");
 const bcrypt = require("bcrypt");
 const jwtGen = require("../utils/jwtGen");
+
+const registerSchema = require("../helpers/registerSchema");
 require("dotenv").config();
 
 //register
 router.post("/register", async (req, res) => {
 	try {
 		//1. destructure req.body
-		const { name, email, password, website } = req.body;
+		const data = await registerSchema.validateAsync(req.body);
+		const { name, email, password } = data;
 
 		//2. check if user exists if true, throw err
 		const user = await pool.query("SELECT * FROM users WHERE email = $1", [
@@ -53,7 +56,7 @@ router.post("/register", async (req, res) => {
 		//
 	} catch (err) {
 		console.error(err.message);
-		res.status(500).send("Server Error");
+		res.status(400).send(err.message);
 	}
 });
 
