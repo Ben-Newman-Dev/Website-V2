@@ -1,0 +1,1 @@
+INSERT INTO users(name, email, password, permissions) VALUES ('Ben', 'ben@bnewman.dev', 'test', '{"canView": true}');

@@ -1,0 +1,28 @@
+{
+	"name": "bnewman.dev-api",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@hapi/joi": "^17.1.1",
+		"@prisma/client": "^2.12.0",
+		"bcrypt": "^5.0.0",
+		"cors": "^2.8.5",
+		"dotenv": "^8.2.0",
+		"express": "^4.17.1",
+		"joi": "^17.3.0",
+		"jsonwebtoken": "^8.5.1",
+		"pg": "^8.5.1"
+	},
+	"devDependencies": {
+		"@prisma/cli": "^2.12.0",
+		"@types/node": "^14.14.9",
+		"ts-node": "^9.0.0",
+		"typescript": "^4.1.2"
+	}
+}

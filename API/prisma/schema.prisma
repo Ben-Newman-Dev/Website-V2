@@ -1,0 +1,60 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Comment {
+  /// This field's default value can currently not be parsed: `uuid_generate_v4()`.
+  id        String   @id @default(dbgenerated())
+  title     String
+  createdAt DateTime @default(now())
+  hidden    Boolean? @default(false)
+  content   Json
+  authorID  String
+  postID    String
+  User      User     @relation(fields: [authorID], references: [id])
+  Post      Post     @relation(fields: [postID], references: [id])
+}
+
+model Post {
+  /// This field's default value can currently not be parsed: `uuid_generate_v4()`.
+  id        String    @id @default(dbgenerated())
+  title     String
+  createdAt DateTime  @default(now())
+  content   Json
+  published Boolean   @default(false)
+  authorID  String
+  projectID String
+  User      User      @relation(fields: [authorID], references: [id])
+  Project   Project   @relation(fields: [projectID], references: [id])
+  Comment   Comment[]
+}
+
+model Project {
+  /// This field's default value can currently not be parsed: `uuid_generate_v4()`.
+  id        String   @id @default(dbgenerated())
+  title     String
+  createdAt DateTime @default(now())
+  content   Json
+  authorID  String
+  User      User     @relation(fields: [authorID], references: [id])
+  Post      Post[]
+}
+
+model User {
+  /// This field's default value can currently not be parsed: `uuid_generate_v4()`.
+  id          String    @id @default(dbgenerated())
+  name        String
+  createdAt   DateTime  @default(now())
+  email       String    @unique
+  password    String
+  website     String?
+  permissions Json
+  Comment     Comment[]
+  Post        Post[]
+  Project     Project[]
+}
